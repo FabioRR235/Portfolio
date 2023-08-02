@@ -31,7 +31,28 @@
 
   }
   /*Nav-Bar*/
-  nav {
+  nav{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  nav.sticky{
+    background: #14a2ea;
+    padding: 13px 0;
+  }
+  nav.sticky .logo{
+    color: #fff;
+  }
+  nav.sticky .nav-list li a {
+    color: #14a2ea;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  nav .navbar{
     display: flex;
     justify-content: space-evenly;
     font-family: 'Playfair', serif;
@@ -67,7 +88,7 @@
   .nav-list li:hover{
     transform: translateY(-10px);
     transition: 0.5s;
-    box-shadow: 0px 5px 10px 0px rgb(198, 192, 192);
+    
     cursor: pointer;
   }
   /*Mobile*/
@@ -202,7 +223,6 @@
 .hidden{
     opacity: 0;
     filter: blur(25px);
-    
     transition: all 1.2s;
   }
   .show{
