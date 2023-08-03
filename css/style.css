@@ -14,6 +14,7 @@
     align-items: center;
     place-items: center;
     min-height: 100vh;
+    padding: 25px;
   }
   
   /*Links*/
@@ -25,11 +26,7 @@
     
   }
   
-  a:hover {
-
-    opacity: 0.7;
-
-  }
+  
   /*Nav-Bar*/
   nav{
     position: fixed;
@@ -41,7 +38,7 @@
   }
   nav.sticky{
     background: #14a2ea;
-    padding: 13px 0;
+    padding: 20px 0;
   }
   nav.sticky .logo{
     color: #fff;
@@ -80,17 +77,23 @@
     letter-spacing: 3px;
     margin-left: 32px;
     background-color: #14a2ea;
+    border: 3px solid transparent;
     border-radius: 25px;
     padding: 10px;
     text-align: center;
     font-size: 25px;
   }
   .nav-list li:hover{
-    transform: translateY(-10px);
-    transition: 0.5s;
-    
-    cursor: pointer;
+    letter-spacing: 3px;
+    margin-left: 32px;
+    background-color: #ffffff;
+    border-color: #14a2ea;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
   }
+  
   /*Mobile*/
   .mobile-menu {
     display: none;
@@ -110,12 +113,12 @@
     }
     .nav-list {
       position: absolute;
-      top: 12vh;
+      top: 15vh;
       right: 0;
       width: 50vw;
-      height: 92vh;
-      background: #0d89c6;
-      border: 2px solid #14a2ea;
+      min-height: 75vh;
+      background: #14a2ea;
+      border: 5px solid #fff;
       border-top-left-radius: 25px;
       border-bottom-left-radius: 25px;
       flex-direction: column;
@@ -200,6 +203,9 @@
   #projetos{
     background-color: bisque;
   }
+  #projetos h1{
+    margin: 30px 0px 0px 0px;
+  }
   .text-s{
     color: #000;
      font-family: 'Playfair', serif;
@@ -225,7 +231,7 @@
     filter: blur(25px);
     transition: all 1.2s;
   }
-  .show{
+  .-off{
     opacity: 1;
     filter: blur(0px);
     transition: all 1.2s;
