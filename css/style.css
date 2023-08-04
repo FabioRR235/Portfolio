@@ -82,16 +82,11 @@
     padding: 10px;
     text-align: center;
     font-size: 25px;
+    
   }
   .nav-list li:hover{
-    letter-spacing: 3px;
-    margin-left: 32px;
-    background-color: #ffffff;
-    border-color: #14a2ea;
-    border-radius: 25px;
-    padding: 10px;
-    text-align: center;
-    font-size: 25px;
+    transform: translateY(-10px);
+    transition: .3s;
   }
   
   /*Mobile*/
@@ -228,12 +223,10 @@
 /*Hidden*/
 .hidden{
     opacity: 0;
-    filter: blur(25px);
     transition: all 1.2s;
   }
   .-off{
     opacity: 1;
-    filter: blur(0px);
     transition: all 1.2s;
   }
   footer{
@@ -243,3 +236,27 @@
     display: flex;
     justify-content: center;
   }
+  /*animação*/
+  [data-anime]{
+    opacity: 0;
+    transition: 1s;
+  }
+  [data-anime="down"]{
+    transform: translate3d(0,-100px,0);
+  }
+  [data-anime="up"]{
+    transform: translate3d(0,100px,0);
+  }
+  [data-anime="left"]{
+    transform: translate3d(-100%,0x,0);
+  }
+  
+  [data-anime="right"]{
+    transform: translate3d(50px,-100px,0);
+  }
+  [data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+  
+  

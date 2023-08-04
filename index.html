@@ -33,16 +33,16 @@
       </nav>
     </header>
     <main>
-        <section class="cont-principal">
-        <div class="text hidden">
+        <section class="cont-principal ">
+        <div class="text" data-anime="left">
             <h2>Olá,</h2>
             <h1>Eu sou Fábio Rabello</h1>
             <h2 style="color:#14a2ea;">Desenvolvedor Front-End</h2>
         </div>
-        <img src="img/boo.png" alt="" class="hidden">       
+        <img src="img/boo.png" data-anime="left" >       
         </section>
 
-        <section id="hab" class="hidden" >
+        <section id="hab" class="hidden">
             <div class="text-s " >
             <h1 >Habilidades - <i class="fa-solid fa-code"></i></h1>
             <h2>Minha trajetória inclui experiências emocionantes, como trabalhos pequenos de freelance, onde pude colocar em prática minhas habilidades em projetos variados e interagir diretamente com clientes e suas necessidades específicas. Essas experiências me ensinaram a lidar com prazos e expectativas, bem como a aprimorar minhas habilidades de comunicação e trabalho em equipe. <br>
@@ -61,15 +61,15 @@
         </section>
 
         <section  id="projetos">
-            <div class="text-s hidden">
+            <div class="text-s ">
             <h1>Projetos - <i class="fa-solid fa-gears"></i></h1>
             </div>
             <a href="https://github.com/FabioRR235" target="_blank">
-            <img src="img/github.svg" alt="" class="hidden">
+            <img src="img/github.svg" alt="" >
             </a>
         </section>
         <section id="formacao">
-            <div class="text-s hidden">
+            <div class="text-s ">
             <h1>Formação Academica - <i class="fa-solid fa-graduation-cap"></i></h1>
             <ul>
                 <li>Ensino Médio incompleto - 2021-2023 (P.E.I Professor José Felix)</li>
@@ -83,25 +83,18 @@
         </footer>
     </main>
 </body>
-<script src="js/script.js"></script>
+<script src=""></script>
 <script>
     const observer = new IntersectionObserver(entries => {
-    console.log(entries);
+        console.log(entries)
+        entries[0].target.classList.add('-off')
+    }, {
+        threshold: 1
+    })
 
-    Array.from(entries).forEach(entry => {
-        if (entry.intersectionRatio >= 1) {
-            entry.target.classList.add('-off');
-        } else {
-            entry.target.classList.remove('-off');
-        }
-    });
-}, {
-    threshold: [0, .5, 1]
-});
-
-Array.from(document.querySelectorAll('.hidden')).forEach(element => {
-    observer.observe(element);
-});
-
+    Array.from(document.querySelectorAll('.hidden')).forEach( element => {
+        observer.observe(element)
+    })
+    
 </script>
 </html>     
