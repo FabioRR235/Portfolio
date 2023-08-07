@@ -258,5 +258,8 @@
     opacity: 1;
     transform: translate3d(0,0,0);
   }
-  
+  .animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
   

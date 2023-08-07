@@ -59,3 +59,31 @@ window.onscroll = function() {
   }
 
 }
+//Animação do Scroll
+// Função para verificar se um elemento está no viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Função para animar elementos com base no atributo data-scroll-animation
+function animateOnScroll() {
+  const elements = document.querySelectorAll('[data-scroll-animation]');
+  elements.forEach((el) => {
+    if (isElementInViewport(el)) {
+      const animation = el.getAttribute('data-scroll-animation');
+      if (animation === 'fade-in') {
+        el.style.opacity = 1;
+      }
+    }
+  });
+}
+
+// Evento para chamar a função de animação no carregamento e no scroll
+document.addEventListener('DOMContentLoaded', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
