@@ -59,31 +59,23 @@ window.onscroll = function() {
   }
 
 }
-//Animação do Scroll
-// Função para verificar se um elemento está no viewport
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+/* Animação com scroll*/
+const item = document.querySelectorAll("[data-anime]");
 
-// Função para animar elementos com base no atributo data-scroll-animation
-function animateOnScroll() {
-  const elements = document.querySelectorAll('[data-scroll-animation]');
-  elements.forEach((el) => {
-    if (isElementInViewport(el)) {
-      const animation = el.getAttribute('data-scroll-animation');
-      if (animation === 'fade-in') {
-        el.style.opacity = 1;
-      }
+const animeScroll = () => {
+  const windowTop = window.pageYOffset + window.innerHeight * 0.85;
+
+  item.forEach(element => {
+    if (windowTop > element.offsetTop) {
+      element.classList.add("animate");
+    } else {
+      element.classList.remove("animate"); // Adicionando o bloco "else" para remover a classe
     }
   });
-}
+};
 
-// Evento para chamar a função de animação no carregamento e no scroll
-document.addEventListener('DOMContentLoaded', animateOnScroll);
-window.addEventListener('scroll', animateOnScroll);
+animeScroll();
+
+window.addEventListener("scroll", () => {
+  animeScroll();
+});
