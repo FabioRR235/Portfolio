@@ -7,16 +7,20 @@
     <title>LandinPage</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital@1&family=Playfair:wght@500&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/e12cf1f921.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital@1&family=Playfair:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e12cf1f921.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/img-ico.svg" type="image/x-icon">
 </head>
 <body>
+    <div class="scroll-button">
+        <a href="#"><i class="fas fa-arrow-up"></i></a>
+    </div>
     <header>
      <nav>
         <div class="navbar">
         <h1 class="logo">
-            Portifólio
+            Fábio Rabello
         </h1>
         <div class="mobile-menu">
           <div class="line1"></div>
@@ -37,49 +41,103 @@
         <div class="text" >
             <h2>Olá,</h2>
             <h1>Eu sou Fábio Rabello</h1>
-            <h2 style="color:#14a2ea;">Desenvolvedor Front-End</h2>
+            <h2 style="color:#3d801b;">Desenvolvedor Front-End</h2>
+            <a href="img/dowload/Curriculo-FabioRabello.pdf" download="Curriculo-FabioRabello">
+            <button class="pushable">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">
+                Dowload - CV <i class="fa-solid fa-arrow-down" style="color: #fff;"></i>
+                </span>
+            </button>
+            </a>
         </div>
         <img src="img/boo.png" >       
         </section>
 
         <section id="hab" >
-            <div class="text-s" data-anime="up">
-            <h1 >Habilidades - <i class="fa-solid fa-code"></i></h1>
-            <h2>Minha trajetória inclui experiências emocionantes, como trabalhos pequenos de freelance, onde pude colocar em prática minhas habilidades em projetos variados e interagir diretamente com clientes e suas necessidades específicas. Essas experiências me ensinaram a lidar com prazos e expectativas, bem como a aprimorar minhas habilidades de comunicação e trabalho em equipe. <br>
-
-                Durante minha jornada acadêmica, tive a oportunidade de me envolver em um grande projeto de desenvolvimento de TCC. Foi uma experiência desafiadora e recompensadora, pois pude explorar novas tecnologias, enfrentar obstáculos técnicos e aprender a criar soluções eficientes e inovadoras.<br>
-                
-                Na especialidade de Front-end, sou habilidoso em linguagens como HTML, CSS e JavaScript, permitindo-me traduzir designs em interfaces atraentes e funcionais. Sou apaixonado por criar experiências de usuário envolventes e responsivas, garantindo que os usuários possam interagir de forma intuitiva com os produtos que desenvolvo.<br>
-                
-                Além disso, meu conhecimento em Back-end me permite compreender a lógica por trás das operações do servidor, trabalhar com APIs e garantir que o funcionamento do sistema seja eficiente e seguro.<br>
-                
-                Graças ao meu interesse e habilidades em Design, posso criar layouts esteticamente agradáveis e focados na usabilidade. Acredito que a combinação entre Front-end, Back-end e Design é essencial para desenvolver soluções completas e impactantes.<br>
-                
-                Estou sempre buscando aprender e me atualizar com as últimas tendências e tecnologias no campo do desenvolvimento de software. Minha jornada é uma constante evolução, e estou ansioso para enfrentar novos desafios e crescer profissionalmente, tornando-me um desenvolvedor mais experiente e valorizado.
-            </h2>
+            <div class="text-s" data-anime="down">
+                <h1 >Habilidades - <i class="fa-solid fa-cube"></i></h1>
             </div>
+            <!-- <div class="skills-content">
+                <div class="porc">
+                    <img src="img/skills/html.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                <div class="porc">
+                    <img src="img/skills/css.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                <div class="porc">
+                    <img src="img/skills/bootstrap.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                <div class="porc">
+                    <img src="img/skills/js.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                <div class="porc">
+                    <img src="img/skills/react.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                <div class="porc">
+                    <img src="img/skills/mysql-svgrepo-com.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                <div class="porc">
+                    <img src="img/skills/git.svg" alt="">
+                    <h1> - 90%</h1>
+                </div>
+                
+                
+            </div> -->
         </section>
 
         <section  id="projetos">
             <div class="text-s" data-anime="down">
             <h1 >Projetos - <i class="fa-solid fa-gears"></i></h1>
             </div>
-            <a href="https://github.com/FabioRR235" target="_blank">
-            <img src="img/github.svg" alt="" data-anime="up">
-            </a>
+            <div>
+                <ul class="list-projects">
+                    <li data-anime="left">
+                        <a class="img-projects" href="https://github.com/FabioRR235/Search-Academy">
+                            <img src="img/projects/SearchAcademy.png" alt="">
+                        </a>
+                    </li>
+                    <li data-anime="down">
+                        <a class="img-projects" href="https://github.com/FabioRR235/TCC-Escola">
+                            <img src="img/projects/AllLibrary.png" alt="">
+                        </a>
+                    </li>
+                    <li data-anime="right">
+                        <a class="img-projects" href="https://fabiorr235.github.io/pratosesabores">
+                            <img src="img/projects/Cozinha.svg" alt="">
+                        </a>
+                    </li>
+                    <li data-anime="up">
+                        <a class="img-projects" href=" https://fabiorr235.github.io/Landing_Page">
+                            <img src="img/projects/Nature.svg" alt="">
+                        </a>
+                    </li>
+                    <li data-anime="up">
+                        <a class="img-projects" href=" https://fabiorr235.github.io/PetVida">
+                            <img src="img/projects/PetVida.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section id="formacao">
             <div class="text-s" >
             <h1 data-anime="down"> Formação Academica - <i class="fa-solid fa-graduation-cap"></i></h1>
             <ul>
-                <li data-anime="up">Ensino Médio incompleto - 2021-2023 (P.E.I Professor José Felix)</li>
+                <li data-anime="up">Ensino Médio incompleto - 2021-Atual (P.E.I Professor José Felix)</li>
                 <li data-anime="up">Curso Técnico Profissionalizante - Técnico em Informática - 2022-2023 (Colégio Técnico Munipal de Aparecida - CTMA)</li>
-
             </ul>
             </div>
         </section>
         <footer>
-            <h1>Criado por Fábio Rabello &copy; 2023 Direitos Reservados  <i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></h1>
+            <h1>Criado por Fábio Rabello &copy; 2023 Direitos Reservados</h1>
         </footer>
     </main>
 </body>
