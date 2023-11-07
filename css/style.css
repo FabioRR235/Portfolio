@@ -127,7 +127,7 @@
       right: 0;
       width: 50vw;
       min-height: 75vh;
-      background: #14a2ea;
+      background: var(--primary-color);
       border: 5px solid #fff;
       border-top-left-radius: 25px;
       border-bottom-left-radius: 25px;
@@ -280,21 +280,94 @@
   .pushable:focus:not(:focus-visible) {
     outline: none;
   }
+  .img-principal{
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-35px);
+    }
+    
+  }
   /*Habilidades*/
   #hab{
     background-color: rgb(248, 207, 155);
   }
-  .skills-content{
+  .container{
+    width: 50%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
-  .porc{
+  .details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 50px;
+  }
+  
+  .bar {
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: 70px;
-    color: var(--primary-color);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .bar span{
+    font-size: 35px;
+  }
+  .bar div {
+    position: relative;
+    width: 0;
+    height: 15px;
+    background: var(--primary-color);
+  }
+  
+  .skills:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  #html-bar {
+    animation: html-fill 2s forwards;
+  }
+  
+  @keyframes html-fill {
+    100% {
+      width: 90%;
+    }
+  }
+  
+  #js-bar {
+    animation: js-fill 2s forwards;
+  }
+  
+  @keyframes js-fill {
+    100% {
+      width: 75%;
+    }
+  }
+  
+  #css-bar {
+    animation: css-fill 2s forwards;
+  }
+  
+  @keyframes css-fill {
+    100% {
+      width: 85%;
+    }
+  }
+  
+  #node-bar {
+    animation: node-fill 2s forwards;
+  }
+  
+  @keyframes node-fill {
+    100% {
+      width: 68%;
+    }
   }
   /*Projetos*/
   #projetos{
@@ -380,7 +453,3 @@
     opacity: 1;
     transform: translate3d(0,0,0);
   }
-
-
-  
-  
