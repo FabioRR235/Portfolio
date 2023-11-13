@@ -297,78 +297,86 @@
     background-color: rgb(248, 207, 155);
   }
   .container{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-  }
-  .details {
+    position: relative;
+    max-width: 50%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 50px;
-  }
-  
-  .bar {
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+.container .skill-box{
+    width: 100%;
+    margin: 25px 0;
+}
+.skill-box .title{
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+}
+.skill-box .skill-bar{
+    height: 25px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+    border: 2px solid white;
+}
+.skill-bar .skill-per{
     position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 10px;
-  }
-  .bar span{
-    font-size: 35px;
-  }
-  .bar div {
-    position: relative;
-    width: 0;
-    height: 15px;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
     background: var(--primary-color);
-  }
-  
-  .skills:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  
-  #html-bar {
-    animation: html-fill 2s forwards;
-  }
-  
-  @keyframes html-fill {
-    100% {
-      width: 90%;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skill-per.git{
+    width: 40%;
+    animation-delay: 0.3s;
+}
+.skill-per.javascript{
+    width: 30%;
+    animation-delay: 0.2s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
     }
-  }
-  
-  #js-bar {
-    animation: js-fill 2s forwards;
-  }
-  
-  @keyframes js-fill {
-    100% {
-      width: 75%;
+    100%{
+        opacity: 1;
     }
-  }
-  
-  #css-bar {
-    animation: css-fill 2s forwards;
-  }
-  
-  @keyframes css-fill {
-    100% {
-      width: 85%;
-    }
-  }
-  
-  #node-bar {
-    animation: node-fill 2s forwards;
-  }
-  
-  @keyframes node-fill {
-    100% {
-      width: 68%;
-    }
-  }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -40px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: var(--primary-color);
+    z-index: 1;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: var(--primary-color);
+    transform: translateX(-50%) rotate(45deg);
+
+}
   /*Projetos*/
   #projetos{
     background-color: bisque;
